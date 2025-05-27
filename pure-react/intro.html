@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <h1>Hello HTML Element {10+20}</h1>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <script type="text/babel">
+        var jsh1 = document.createElement("h1")
+        jsh1.innerText="Hello JS DOM Element"
+        jsh1.style.color="red"
+        jsh1.style.backgroundColor='lightblue'
+        document.getElementById("d1").appendChild(jsh1)
+
+        // console.log(React);
+
+        var rh1 = React.createElement("h1",{style:{color:"lightgreen",backgroundColor:"yellow"}},"Hello React Element")
+        ReactDOM.render(rh1,document.getElementById("d2"))
+
+        var jsxh1 = <h1 style={{color:"blue",backgroundColor:'lightpink'}}>Hello JSX React Element {10+20}</h1>
+        ReactDOM.render(jsxh1,document.getElementById("d3"))
+    </script>
+</body>
+</html>

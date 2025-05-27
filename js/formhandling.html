@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="regform" onsubmit="abc(event)">
+        <input type="text" name="fullname">
+        <br>
+        <input type="password" name="password">
+        <br>
+        Gender:
+        <input type="radio" name="gen" value="m">:Male
+        <input type="radio" name="gen" value="f">:Female
+        <input type="radio" name="gen" value="o">:Others
+        <br>
+        Technology:
+        <input type="checkbox" name="tech" value="reactjs">reactjs
+        <input type="checkbox" name="tech" value="angular">angular
+        <input type="checkbox" name="tech" value="nodejs">nodejs
+        <input type="checkbox" name="tech" value="PYTHON">PYTHON
+        <input type="checkbox" name="tech" value="dbms">dbms
+        <input type="checkbox" name="tech" value="expressjs">expressjs
+        <br>
+        <button>Show details</button>
+    </form>
+    <script>
+        var details={}
+        function abc(ev){
+            ev.preventDefault();
+            details.fullname=document.regform.fullname.value;
+            details.password=document.regform.password.value;
+            details.gender=document.regform.gen.value;
+            // details.technologies=document.regform.tech.value;
+            details.technologies=[]
+            for(var i=0;i<=document.regform.tech.length-1;i++){
+                if(document.regform.tech[i].checked==true){
+                    details.technologies.push(document.regform.tech[i].value)
+                }
+                console.log(document.regform.tech[i].value);
+            }
+            console.log(details);
+        }
+    </script>
+</body>
+</html>

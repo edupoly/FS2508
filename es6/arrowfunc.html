@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function add(a,b){
+            return a+b;
+        }
+
+        var sum = function(a,b){
+            return a+b
+        }
+
+        var diff = (a,b)=>a-b
+        
+        // var diff = (a,b)=>{
+        //     return a-b
+        // }
+        
+        //arrow function//lambda function
+        console.log(add(10,20));
+        console.log(sum(10,20));
+        console.log(diff(34,20));
+
+
+        var ar = [33,48,93,29,28,44]
+        ar.forEach(a=> console.log(a))
+
+        var br = ar.filter(function(a){
+            if(a%2==0){
+                return true
+            }
+            else{
+                return false
+            }
+        })
+        console.log(br);
+
+        var cr = ar.filter(a=>!(a%2))
+        console.log(cr);
+    </script>
+</body>
+</html>

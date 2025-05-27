@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Digital Edify</h1>
+    <ul id="d2">
+
+    </ul>
+    <ol id="d3">
+
+    </ol>
+    <script>
+        var nh = document.createElement("h1")
+        nh.innerText="Digital Edify";
+        document.body.appendChild(nh)
+        console.log(nh);
+
+        var students = ["deepika","alia","Anushka","Samanta"]
+        var employees = ["Surya","Karthi","Nithin","Rahul"]
+        students.forEach(function(s){
+            var nli = document.createElement("li")
+            nli.innerText=s;
+            console.log(nli);
+            document.getElementById("d2").appendChild(nli)
+        })
+
+        employees.forEach(function(emp){
+            var nli = document.createElement("li")
+            nli.innerHTML=emp;
+            document.getElementById("d3").appendChild(nli)
+        })
+    </script>
+</body>
+</html>
+<!-- 
+    1. creating html elements
+    2. generate lists and tables for arrays or array of objects
+-->

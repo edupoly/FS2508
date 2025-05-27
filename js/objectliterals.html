@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var ob = {
+        //     firstname:"pushpa",
+        //     lastname:"sharon",
+        //     gender:'female',
+        //     place:"Hyderabad",
+        //     cash:102030302
+        // }
+
+        // console.log(ob.firstname);
+        // console.log(ob.lastname);
+
+        // console.log(ob["gender"]);
+
+        // var s = "place";
+
+        // console.log(ob[s]);
+        // console.log(ob["s"]);
+
+        // for(var k in ob)
+        // {
+        //     console.log("Hello",k,ob[k]);
+        // }
+
+        var myproduct = {
+                "id": 1,
+                "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+                "price": 109.95,
+                "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+                "category": "men's clothing",
+                "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+                "rating": {
+                    "rate": 3.9,
+                    "count": 120,
+                    "details":{
+                        user:"skjdf",
+                        timestamp:34534
+                    }
+                },
+                "colors":["baby pink","cherry red","light purple"]
+            }
+            console.log(myproduct.price);
+            console.log(myproduct.rating.rate);
+            console.log(myproduct['rating']['rate']);
+            console.log(myproduct.colors[1]);
+    </script>
+</body>
+</html>

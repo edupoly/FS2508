@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d2{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="d1">Hello Javascript</h1>
+    <div id="d2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor asperiores pariatur dolores magnam beatae, neque tempore soluta! Inventore molestias accusantium quisquam, velit, quaerat sed suscipit officiis ratione odio nam repellendus.
+    </div>
+    <input type="password" id="d3" value="mypassword">
+    <script>
+        var x = document.getElementById("d1")
+        x.style.backgroundColor="red"
+        x.style.borderLeft="5px solid green"
+        
+        var y = document.getElementById("d2")
+        y.style.display="block"
+
+        var p = document.getElementById("d3")
+        p.type="text"
+    </script>
+</body>
+</html>

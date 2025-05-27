@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="products.js"></script>
+</head>
+<body>
+    <table border="2">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody id="d2">
+
+        </tbody>
+    </table>
+    <script>
+        products.forEach(function(product){
+            var ntr = document.createElement('tr')
+            var ttd = document.createElement('td')
+            ttd.innerText=product.title;
+            ntr.appendChild(ttd)
+            var ptd = document.createElement("td")
+            ptd.innerText=product.price;
+            ntr.appendChild(ptd)
+            var dtd = document.createElement("td")
+            dtd.innerText=product.description;
+            ntr.appendChild(dtd)
+            var rtd = document.createElement("td")
+            rtd.innerText=product.rating.rate;
+            ntr.appendChild(rtd)
+            document.getElementById("d2").appendChild(ntr)
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="d1">
+    <br>
+    <input type="text" id="d2">
+    <br>
+    <button onclick="abc()">Add Above two boxes!!!</button>
+    <script>
+        function abc(){
+            var x = +document.getElementById("d1").value
+            var y = +document.getElementById("d2").value
+            console.log(x*y);
+        }
+    </script>
+</body>
+</html>
+<!-- 
+    1. mouse events
+        click,dblclick,mousedown,mouseup,mouseover,mouseout
+    2. keyboard events
+        keypdown,keyup
+    3. form events
+        submit, blur, focus
+    4. window events
+        open,close,minimise,maximise,resize
+-->

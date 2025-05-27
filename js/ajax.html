@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d3{
+            display: flex;
+            flex-wrap:wrap;
+            justify-content: center;
+        }
+        #d3 li{
+            width:23%;
+            padding:10px;
+            list-style: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <ul id="d3">
+
+    </ul>
+    <script>
+        fetch("https://dummyjson.com/products?limit=10&skip=120")
+        .then(function(res){return res.json()})
+        .then(function(data){
+            data.products.forEach(function(pr){
+                var nli = document.createElement("li")
+                var pimg = document.createElement("img")
+                pimg.src = pr.thumbnail
+                var ptitle = document.createElement("b")
+                ptitle.innerText=pr.title;
+                var pprice = document.createElement("i")
+                pprice.innerText=pr.price;
+                nli.appendChild(pimg)
+                nli.appendChild(ptitle)
+                nli.appendChild(pprice)
+                document.getElementById("d3").appendChild(nli)
+            })
+        })
+        console.log("HI");
+    </script>
+</body>
+</html>
+<!--  
+
+-->

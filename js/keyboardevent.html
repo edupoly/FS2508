@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" onkeyup="abc(event)" id="d1">
+    <h1>Entered Text:<span id="d2"></span></h1>
+    <script>
+        function abc(ev){
+            var x = ev.target.value;
+            document.getElementById("d2").innerText=x;
+        }
+    </script>
+</body>
+</html>

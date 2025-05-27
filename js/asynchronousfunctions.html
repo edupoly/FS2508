@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("Hello");
+        var sum = 0
+        setTimeout(function(){
+            for(var i=0;i<=1299999999;i++){
+                sum = sum+i
+            }
+            console.log("Inside settimeout");
+        },4000)
+        console.log(sum);
+        console.log("HI");
+    </script>
+</body>
+</html>
